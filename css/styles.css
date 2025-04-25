@@ -1,0 +1,23 @@
+header{
+    background-color: #212121;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+footer{
+    background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-list{
+    list-style: none;
+}
+
+.nav-list a{
+    color: white;
+    text-decoration: none;
+}
