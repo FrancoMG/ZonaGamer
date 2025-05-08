@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./img/favicon-48x48.png" sizes="48x48" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>ZonaGamer</title>
 </head>
 
 <body>
     <header>
-        <table>
-            <tr>
-                <td><img src="./img/logo.png" alt="Logo de ZonaGamer" width="100px"></td>
-                <td><h1>ZonaGamer</h1></td>
-            </tr>
-        </table>
-        <hr>
+        <div class="logo-titulo">
+            <div class="logo">
+                <img src="./img/logo2.png" alt="Logo de ZonaGamer" width="120px">
+            </div>
+        </div>
         <nav>
-            <ul class="nav-list">
-                <li><a href="">Inicio</a></li>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
                 <li><a href="">Nosotros</a></li>
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="./ubicacion.html">Ubicacion</a></li>
@@ -29,18 +29,59 @@
     </header>
 
     <main>
-        <table>
-            <tr>
-                <td><img src="./img/9700x.jpg" width="20%" alt="Ryzen 7 9700x"></td>
-                <td><img src="./img/5080.jpg" width="20%" alt="RTX 5080"></td>
-            </tr>
-        </table>
-    </main>
+        <p class="destacados">Productos destacados</p>
+        <div class="imagenes1">
+            <a href="./productos.html" style="text-decoration:none; color:inherit;">
+                <div class="imagen1">
+                    <img src="./img/9700x.jpg" alt="Ryzen 7 9700x">
+                    <p>Procesador AMD Ryzen 7 9700X 5.5GHz Turbo AM5</p>        
+                </div>
+            </a>
+            <a href="./index.html" style="text-decoration:none; color:inherit;">
+                <div class="imagen2">
+                    <img src="./img/5080.jpg" width="20%" alt="RTX 5080">
+                    <p>Placa de Video NVIDIA GeForce RTX 5080 16GB GDDR6X</p>
+                </div>
+            </a>
+            <a href="./index.html" style="text-decoration:none; color:inherit;">
+                <div class="imagen3">
+                    <img src="./img/X870-e.png" alt="X870-E">
+                    <p>Motherboard Asus (am5) Rog Strix X870e-e Gaming Wifi</p>
+                </div>
+            </a>
+        </div>
+        <div class="imagenes2">
+            <a href="./index.html" style="text-decoration:none; color:inherit;">
+                <div class="imagen4">
+                    <img src="./img/Dominator-Titanium.png" alt="Memoria RAM">
+                    <p>Memoria RAM 32GB (2X16) DDR5 6000 Corsair Dominator Titanium RGB</p>
+                </div>
+            </a>
+            <a href="./index.html" style="text-decoration:none; color:inherit;">
+                <div class="imagen5">
+                    <img src="./img/Fuente.png" alt="Fuente">
+                    <p>Fuente Cooler Master GX2 850W 80 Plus Gold ATX 3.0 PCIe 5.0 Full Modular</p>
+                </div>
+            </a>
+            <a href="./index.html" style="text-decoration:none; color:inherit;">
+                <div class="imagen6">
+                    <img src="./img/M.2.png" alt="M.2">
+                    <p>Disco Solido SSD M.2 NVME WD_BLACK SN850X 2TB</p>
+                </div>
+            </a>
+        </div>
+        </main>
     
     <footer>
         <hr>
-        <p>&copy; 2023 ZonaGamer. Todos los derechos reservados.</p>
-        <p>Desarrollado por Franco Molina González | <a href="mailto:molinagonzalezfranco@gmail.com">molinagonzalezfranco@gmail.com</a></p>
+        <div class="redes">
+            <a href="./index.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="./index.html"><i class="fa-brands fa-twitter"></i></a>
+            <a href="./index.html"><i class="fa-brands fa-facebook"></i></a>
+            <a href="./index.html"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 ZonaGamer. Todos los derechos reservados.</p>
+        <p>Desarrollado por Franco Molina González | <a href="mailto:molinagonzalezfranco@gmail.com" class="mail">molinagonzalezfranco@gmail.com</a></p>
         <hr>
     </footer>
     
