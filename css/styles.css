@@ -61,40 +61,137 @@ main h2{
     font-family: 'GTA Regular';
 }
 
+.nosotros{
+    background-color: #EEEEEE;
+    padding: 20px;
+    margin: 20px auto; /* Centra el contenedor */
+    width: 60%; /* Ancho del contenedor */
+}
+
+.nosotros h2{
+    font-family: 'GTA Regular';
+    font-size: 20px;
+    text-align: center; /* Centra el texto */
+}
+
+.nosotros h1{
+    color: rgb(33, 33, 33);
+    font-family: 'GTA Medium';
+    font-size: 30px;
+    text-align: center; /* Centra el texto */
+}
+
+.nosotros p{
+    font-family: 'GTA Regular';
+    font-size: 20px;
+    text-align: center; /* Justifica el texto */
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Espaciado uniforme entre los elementos */
+    gap: 5px; /* Espaciado entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    width: 80%; /* Ancho del contenedor */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
+    padding: 5px; /* Espaciado interno */
+}
+
+.proce, .mother, .placa, .fuente, .ram, .ssd {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
+    width: 200px; /* Establece un ancho uniforme */
+    height: 350px; /* Establece una altura uniforme */
+    padding: 10px; /* Espaciado interno uniforme */
+    margin: 10px; /* Espaciado externo uniforme */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.proce img, .mother img, .placa img, .fuente img, .ram img, .ssd img{
+    width: 80%; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto;
+}
+
+.nombre{
+    font-family: 'GTA Regular';
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto dentro del div */
+}
+
+.valor {
+    font-family: 'GTA Medium';
+    font-size: 20px;
+    margin-top: 10px; /* Espaciado superior para separar del contenido anterior */
+    margin-bottom: 0;
+    text-align: left; /* Alinea el texto a la izquierda */
+    align-self: flex-start; /* Posiciona el valor en la esquina inferior izquierda del div */
+}
+
+.proce:hover, .mother:hover, .placa:hover, .fuente:hover, .ram:hover, .ssd:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
 .destacados{
     font-family: 'Gta Medium';
     font-size: 30px;
     margin-left: 25%;
 }
 
-.imagenes1, .imagenes2{
+.imagenes1{
     display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
     width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto; /* Centra el contenedor */
     margin-right: auto; /* Centra el contenedor */
     padding: 5px; /* Espaciado interno */
-    justify-content: space-between;
+    flex-direction: row;
 }
 
-.imagen1, .imagen2, .imagen3, .imagen4, .imagen5, .imagen6{
+.imagen1, .imagen2, .imagen3{
     background-color: #FFFFFF;
-    display: flex; 
-    width: 90%;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 95%;
     padding: 10px;
     border-radius: 10px;
     border: 1.5px solid black;
+    flex: 1 1 auto; /* Permite que los elementos se ajusten proporcionalmente */
+    max-width: 90%;/* Limita el ancho máximo de cada div */
+    margin: 0 10px; /* Espaciado horizontal entre los divs */
 }
 
-.imagen1 img, .imagen2 img, .imagen3 img, .imagen4 img, .imagen5 img, .imagen6 img{
+.imagen1 img, .imagen2 img, .imagen3 img{
     width: 30%; /* Ajusta el tamaño de la imagen si es necesario */
     height: auto;
 }
 
-.imagen1 p, .imagen2 p, .imagen3 p, .imagen4 p, .imagen5 p, .imagen6 p{
+.imagen1 .nombre, .imagen2 .nombre, .imagen3 .nombre{
     font-family: 'GTA Regular';
-    margin-left: 20px;
+    margin-top: 25px; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto dentro del div */
+}
+
+.precio{
+    font-family: 'GTA Medium';
+    font-size: 20px;
+    margin-top: 5px; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto del precio */
 }
 
 .imagen1:hover, .imagen2:hover, .imagen3:hover, .imagen4:hover, .imagen5:hover, .imagen6:hover{
@@ -112,7 +209,7 @@ main h2{
 
 #nombre, #email, #mensaje{
     font-family: 'GTA Regular'; /* Fuente personalizada */
-    width: 100%; /* Ancho completo */
+    width: 98%; /* Ancho completo */
     padding: 10px; /* Espaciado interno */
     margin-bottom: 10px; /* Espaciado inferior */
     border: 1px solid #ccc; /* Borde gris claro */
@@ -136,6 +233,16 @@ main h2{
     cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
+.msi {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    max-width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto; /* Mantiene las proporciones de la imagen */
+}
+
 footer{
     background-color: rgb(33, 33, 33);
     font-family: 'GTA Regular';
@@ -143,11 +250,13 @@ footer{
 }
 
 .redes{
+    width: 20%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-left: 1000px;
-    margin-right: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .redes i{
