@@ -1,16 +1,15 @@
 @font-face {
     font-family: 'GTA Medium';
-    src: url('./fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
+    src: url('../fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
 }
     
 @font-face{
     font-family: 'GTA Regular';
-    src: url('./fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
+    src: url('../fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
 }
 
 body{
     background-color: #EEEEEE;
-
 }
 
 .logo-titulo {
