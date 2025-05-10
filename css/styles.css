@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'GTA Medium';
-    src: url('/fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
+    src: url('./fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
 }
     
 @font-face{
     font-family: 'GTA Regular';
-    src: url('/fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
+    src: url('./fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
 }
 
 body{
@@ -30,6 +30,16 @@ h1{
     text-align: center;
 }
 
+.equipos{
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    width: 1500px; /* Hace que la imagen sea responsiva */
+    max-width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 50px; /* Bordes redondeados */
+}
+
 nav ul {
     background-color: #EEEEEE;
     display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
@@ -37,7 +47,7 @@ nav ul {
     justify-content: center; /* Centra los elementos horizontalmente */
     list-style: none; /* Elimina los puntos de la lista */
     padding: 0; /* Elimina el relleno */
-    margin-top: 10px; /* Elimina el margen */
+    margin-top: 15px; /* Elimina el margen */
 }
 
 nav li {
@@ -108,17 +118,23 @@ main h2{
     flex-direction: column; /* Asegura que los elementos hijos estén en columna */
     align-items: center; /* Centra los elementos horizontalmente */
     justify-content: space-between; /* Distribuye el contenido uniformemente */
-    width: 200px; /* Establece un ancho uniforme */
-    height: 350px; /* Establece una altura uniforme */
+    width: 250px; /* Establece un ancho uniforme */
+    height: 400px; /* Establece una altura uniforme */
     padding: 10px; /* Espaciado interno uniforme */
     margin: 10px; /* Espaciado externo uniforme */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
 
-.proce img, .mother img, .placa img, .fuente img, .ram img, .ssd img{
-    width: 80%; /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto;
+.img-producto{
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.proce img, .mother img, .placa img, .fuente img, .ram img, .ssd img {
+    display: flex; /* Asegura que las imágenes se comporten como bloques */
+    width: 100%; /* Mantiene el tamaño de las imágenes al 80% del contenedor */
 }
 
 .nombre{
@@ -127,6 +143,12 @@ main h2{
     margin-top: auto;
     margin-bottom: auto; /* Espaciado superior para separar del contenido anterior */
     text-align: center; /* Centra el texto dentro del div */
+}
+
+.desc-producto{
+    display: flex;
+    background-color: blueviolet;
+    align-items: center;
 }
 
 .valor {
@@ -241,6 +263,7 @@ main h2{
     margin-right: auto; /* Centra horizontalmente */
     max-width: 100%; /* Hace que la imagen sea responsiva */
     height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 30px; /* Bordes redondeados */
 }
 
 footer{
