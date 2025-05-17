@@ -17,13 +17,70 @@ header {
     top: 0; /* Lo posiciona en la parte superior de la ventana */
 }
 
-.navbar{
+.logo {
     display: flex;
-    justify-content: flex-start;
-    background-color: rgb(33, 33, 33);
-    padding: 10px;
+    align-items: center;
+    line-height: 0; /* evita espacio adicional */
 }
 
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* para que no crezca demasiado en pantallas grandes */
+}
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    padding: 10px 30px;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.search-bar input[type="search"] {
+    padding: 6px 10px;
+    border-radius: 7px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: 'GTA Regular';
+    width: 500px;
+}
+
+.search-bar input[type="search"]:focus {
+    outline: none;
+    border: 2px solid transparent;
+    background: linear-gradient(#222, #222) padding-box, linear-gradient(45deg, #03ACE4, #935DBA, #D83CA0) border-box;
+}
+
+.search-bar button {
+    padding: 6px 12px;
+    border: none;            
+    background: transparent;
+    font-family: 'GTA Regular';
+    color: #fff;
+    cursor: pointer;
+    margin-left: -50px;  /* Superpone el botón al borde derecho del input */
+    z-index: 2;
+    position: relative;
+}
+
+.search-bar:focus-within button i { /* '.search-bar:focus-within' aplica estilos cuando cualquier hijo (como el input) está enfocado. */
+    background: linear-gradient(45deg, #03ACE4, #935DBA, #D83CA0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 h1{
     color: white;
@@ -120,10 +177,15 @@ main h2{
     margin: 10px; /* Espaciado externo uniforme */
     border-radius: 10px; /* Bordes redondeados */
     border: 1px solid black;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
 }
 
 .proce:hover, .mother:hover, .placa:hover, .fuente:hover, .ram:hover, .ssd:hover{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
 }
 
 .img-producto{
@@ -191,6 +253,10 @@ main h2{
     flex: 1 1 auto; /* Permite que los elementos se ajusten proporcionalmente */
     max-width: 90%;/* Limita el ancho máximo de cada div */
     margin: 0 10px; /* Espaciado horizontal entre los divs */
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
 }
 
 .imagen1 img, .imagen2 img, .imagen3 img{
@@ -212,7 +278,8 @@ main h2{
 }
 
 .imagen1:hover, .imagen2:hover, .imagen3:hover, .imagen4:hover, .imagen5:hover, .imagen6:hover{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
 }
 
 .contacto{
