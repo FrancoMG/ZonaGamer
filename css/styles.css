@@ -12,6 +12,12 @@ body{
     background-color:  #EEEEEE;
 }
 
+.contenedor{
+    display: grid;
+    min-height: 100dvh; /* Altura mínima de la ventana */
+    grid-template-rows: auto 1fr auto; /* Fija el header y footer, y permite que el contenido principal ocupe el espacio restante */
+}
+
 header {
     position: sticky; /* Hace que el header se quede fijo */
     top: 0; /* Lo posiciona en la parte superior de la ventana */
