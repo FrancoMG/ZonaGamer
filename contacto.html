@@ -12,61 +12,63 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <a href="./index.html" class="logo">
-                <img src="./img/logo2.png" alt="Logo de ZonaGamer">
-            </a>
-            <form class="search-bar" action="#" method="get">
-                <input type="search" name="q" placeholder="Buscar productos">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+    <div class="contenedor">
+        <header>
+            <div class="navbar">
+                <a href="./index.html" class="logo">
+                    <img src="./img/logo2.png" alt="Logo de ZonaGamer">
+                </a>
+                <form class="search-bar" action="#" method="get">
+                    <input type="search" name="q" placeholder="Buscar productos">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </header>
+    
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./ubicacion.html">Ubicacion</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="contacto">
+                <form action="https://formspree.io/f/xrbqgejn" method="POST">
+                    <input type="text" name="Nombre" id="nombre" placeholder="Nombre" required>
+                    <br>
+                    <input type="email" name="Email" id="email" placeholder="Email" required>
+                    <br>
+                    <textarea name="Mensaje" id="mensaje" rows="5" cols="30" placeholder="Mensaje" required></textarea> 
+                    <br>
+                    <div class="botones">
+                        <input type="submit" name="Submit" id="submit" placeholder="Enviar" required>
+                        <input type="reset" name="Reset" id="reset" placeholder="Restablecer" required>
+                    </div>
+                </form>
         </div>
-    </header>
-
-    <main>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./ubicacion.html">Ubicacion</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="contacto">
-            <form action="https://formspree.io/f/xrbqgejn" method="POST">
-                <input type="text" name="Nombre" id="nombre" placeholder="Nombre" required>
-                <br>
-                <input type="email" name="Email" id="email" placeholder="Email" required>
-                <br>
-                <textarea name="Mensaje" id="mensaje" rows="5" cols="30" placeholder="Mensaje" required></textarea> 
-                <br>
-                <div class="botones">
-                    <input type="submit" name="Submit" id="submit" placeholder="Enviar" required>
-                    <input type="reset" name="Reset" id="reset" placeholder="Restablecer" required>
-                </div>
-            </form>
+    
+        </main>
+    
+        <br>
+    
+        <footer>
+            <hr>
+            <div class="redes">
+                <a href="./index.html"><i class="fa-brands fa-instagram"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-twitter"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-facebook"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2025 ZonaGamer. Todos los derechos reservados.</p>
+            <p>Desarrollado por Franco Molina González | <a href="mailto:molinagonzalezfranco@gmail.com" class="mail">molinagonzalezfranco@gmail.com</a></p>
+            <hr>
+        </footer>
     </div>
-
-    </main>
-
-    <br>
-
-    <footer>
-        <hr>
-        <div class="redes">
-            <a href="./index.html"><i class="fa-brands fa-instagram"></i></a>
-            <a href="./index.html"><i class="fa-brands fa-twitter"></i></a>
-            <a href="./index.html"><i class="fa-brands fa-facebook"></i></a>
-            <a href="./index.html"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-        <p>&copy; 2025 ZonaGamer. Todos los derechos reservados.</p>
-        <p>Desarrollado por Franco Molina González | <a href="mailto:molinagonzalezfranco@gmail.com" class="mail">molinagonzalezfranco@gmail.com</a></p>
-        <hr>
-    </footer>
 
 </body>
 </html>
