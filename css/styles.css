@@ -168,8 +168,10 @@ main h2{
 .nosotros{
     background-color: #EEEEEE;
     padding: 20px;
-    margin: 20px auto; /* Centra el contenedor */
-    width: 60%; /* Ancho del contenedor */
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor */
+    margin-top: 40px; /* Espaciado superior */
+    width: 70%; /* Ancho del contenedor */
 }
 
 .nosotros h2{
@@ -450,6 +452,10 @@ footer p{
         margin-right: 0;
         max-width: 60%; /* Ajusta según tu diseño */
     }
+
+        .logo-nosotros{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 490px){
@@ -462,5 +468,9 @@ footer p{
         width: 100%; /* Ancho completo */
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .logo-nosotros{
+        width: 50%;
     }
 }
