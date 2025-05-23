@@ -48,18 +48,21 @@ header {
 
 .search-bar {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    position: relative; /* Para posicionar el botón absolutamente dentro */
+    max-width: 400px; /* O el valor que prefieras */
+    width: 100%;
 }
 
 .search-bar input[type="search"] {
-    width: 450px;
-    padding: 6px 10px;
+    width: 100%;
+    padding: 6px 40px 6px 10px; /* Deja espacio a la derecha para el botón */
     border-radius: 7px;
     border: 1px solid #fff;
     background: transparent;
     color: #fff;
     font-family: 'GTA Regular';
+    box-sizing: border-box;
 }
 
 .search-bar input[type="search"]:focus {
@@ -69,15 +72,17 @@ header {
 }
 
 .search-bar button {
+    position: absolute;
+    right: 8px; /* Ajusta según tu diseño */
+    top: 50%;
+    transform: translateY(-50%);
     padding: 6px 12px;
-    border: none;            
+    border: none;
     background: transparent;
     font-family: 'GTA Regular';
     color: #fff;
     cursor: pointer;
-    margin-left: -50px;  /* Superpone el botón al borde derecho del input */
     z-index: 2;
-    position: relative;
 }
 
 .search-bar:focus-within button i { /* '.search-bar:focus-within' aplica estilos cuando cualquier hijo (como el input) está enfocado. */
@@ -88,7 +93,7 @@ header {
 }
 
 nav ul {
-    width: 60%;
+    width: 100%;
     display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario */
     justify-content: center; /* Centra los elementos horizontalmente */
@@ -112,9 +117,38 @@ nav a:hover{
     -webkit-text-fill-color: transparent;
 }
 
-h1{
-    color: white;
-    text-align: center;
+.reseñas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px; /* Espaciado entre los elementos */
+    grid-row-gap: 150px; /* Espaciado entre los elementos */
+    justify-items: center; /* Centra los elementos dentro de cada celda */
+    margin-left: 40px; /* Centra el contenedor */
+    margin-right: 40px; /* Centra el contenedor */
+    margin-bottom: 60px;
+}
+
+.reseña{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 15px;
+    gap: 20px; /* Espaciado entre los elementos */
+    border-radius: 10px;
+    border: 2px solid black;
+    max-width: 90%;/* Limita el ancho máximo de cada div */
+    font-family: 'GTA Regular';
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.reseña:hover{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
 }
 
 .equipos{
@@ -179,7 +213,7 @@ main h2{
     align-items: center; /* Centra los elementos horizontalmente */
     justify-content: space-between; /* Distribuye el contenido uniformemente */
     width: 250px; /* Establece un ancho uniforme */
-    height: 400px; /* Establece una altura uniforme */
+    height: 420px; /* Establece una altura uniforme */
     padding: 10px; /* Espaciado interno uniforme */
     margin: 10px; /* Espaciado externo uniforme */
     border-radius: 10px; /* Bordes redondeados */
@@ -219,20 +253,18 @@ main h2{
     align-items: center;
 }
 
+.precio-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ancho completo */
+}
+
 .valor {
     font-family: 'GTA Medium';
     font-size: 20px;
     margin-top: 10px; /* Espaciado superior para separar del contenido anterior */
     margin-bottom: 0;
-    text-align: left; /* Alinea el texto a la izquierda */
-    align-self: flex-start; /* Posiciona el valor en la esquina inferior izquierda del div */
-}
-
-.destacados{
-    color: rgb(33, 33, 33);
-    font-family: 'Gta Medium';
-    margin-top: 40px;
-    margin-bottom: 40px; /* Espaciado inferior */
 }
 
 .imagenes1{
@@ -322,14 +354,27 @@ main h2{
     cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
+#submit:hover, #reset:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    color: #fff; /* Asegura que el texto sea visible */
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #fff;
+    transition: background 0.3s;
+}
+
 .msi {
-    display: block; /* Asegura que la imagen se comporte como un bloque */
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    width: 100%; /* Hace que la imagen sea responsiva */
+}
+
+.msi img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
     margin-left: auto; /* Centra horizontalmente */
     margin-right: auto; /* Centra horizontalmente */
-    max-width: 100%; /* Hace que la imagen sea responsiva */
-    height: auto; /* Mantiene las proporciones de la imagen */
+    width: auto; /* Hace que la imagen sea responsiva */
     border-radius: 30px; /* Bordes redondeados */
 }
 
@@ -340,12 +385,12 @@ footer{
 }
 
 .redes{
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
-    padding: 10px;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -366,7 +411,7 @@ footer{
 footer p{
     font-size: small;
     text-align: center;
-    padding: 10px;
+    margin-top: 20px; /* Espaciado superior */
 }
 
 .mail{
@@ -378,4 +423,44 @@ footer p{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@media only screen and (max-width: 680px){
+    .msi img{
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 665px){
+    .navbar{
+        flex-direction: row; /* Horizontal */
+        justify-content: space-between; /* Logo a la izquierda, search-bar a la derecha */
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .search-bar{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 60%; /* Ajusta según tu diseño */
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .navbar{
+        flex-direction: column; /* Vertical */
+        align-items: center; /* Centra los elementos */
+        gap: 15px; /* Espaciado entre los elementos */
+    }
+    .search-bar{
+        width: 100%; /* Ancho completo */
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
