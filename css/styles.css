@@ -393,7 +393,7 @@ nav a:hover{
 }
 
 
-/***************** RESEÑAS *****************/
+/***************** RESEÑAS (UTILIZADAS ANTES DE IMPLEMENTAR LA API) *****************/
 .reseñas{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -427,6 +427,7 @@ nav a:hover{
     box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
     transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
 }
+
 
 
 /***************** CARRITO *****************/
